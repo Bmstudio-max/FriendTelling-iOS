@@ -2,12 +2,12 @@ workflows:
   ios-distribution:
     name: FriendTelling iOS Distribution
     max_build_duration: 60
+    integrations:
+      app_store_connect: AppStoreConnect
     environment:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.bmstudio.friendtelling
-      vars:
-        APP_STORE_APPLE_ID: 6745678901
       xcode: latest
       cocoapods: default
     scripts:
